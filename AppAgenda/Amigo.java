@@ -9,25 +9,26 @@ public class Amigo {
     private int diaNascimento;
     private int mesNascimento;
     private int anoNascimento;
-    // private Endereco endereco;
+    private Endereco endereco;
 
-    public Amigo(String nome, String telefone, String email, int diaNascimento, int mesNascimento, int anoNascimento /*, Endereco endereco */) {
+    public Amigo(String nome, String telefone, String email, int diaNascimento, int mesNascimento, int anoNascimento , Endereco endereco) {
         this.nome = nome;
         this.telefone = telefone;
         this.email = email;
         this.anoNascimento = anoNascimento;
         this.mesNascimento = mesNascimento;
         this.anoNascimento = anoNascimento;
+        this.endereco = endereco;
     }
 
     // Getters e Setters
 
-    // public Endereco getEndereco() {
-    //     return this.endereco;
-    // }
-    // public void setEndereco(Endereco endereco) {
-    //     this.endereco = endereco;
-    // }
+    public Endereco getEndereco() {
+        return this.endereco;
+    }
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
 
     public String getNome() {
         return this.nome;
@@ -70,6 +71,9 @@ public class Amigo {
     public void setAnoNascimento(int anoNascimento) {
         this.anoNascimento = anoNascimento;
     }
+    /* Fim dos getters e setters */
+
+    /* Métodos */
 
     // Metodo que calcula quanto tempo falta para o aniversário
     public String calcularDiasParaAniversariar(String nome) {
@@ -106,8 +110,10 @@ public class Amigo {
             "Nome: " + nome +
             "\nE-mail: " + email +
             "\nTelefone: " + telefone +
-            "\nAniversário: " + diaNascimento2 + "/" + mesNascimento2 + "/" + anoNascimento;
-            // "\n" + endereco.imprimir() + "\n";
+            "\nAniversário: " + diaNascimento2 + "/" + mesNascimento2 + "/" + anoNascimento +
+            "\n" + endereco.imprimir() + "\n";
         return saida;
     }
+
+    /* Fim dos Métodos */
 }
